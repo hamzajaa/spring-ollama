@@ -1,0 +1,3 @@
+docker compose up || docker compose -f compose.yaml up
+docker exec -it ollama ollama run llama2
+docker exec -it ollama ollama run llava => support images
