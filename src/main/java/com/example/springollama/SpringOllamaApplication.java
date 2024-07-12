@@ -62,7 +62,7 @@ public class SpringOllamaApplication {
             System.out.println("********************************");
 
             Player player = chatClient.prompt()
-                    .user("give me the Best player in the world in 2023")
+                    .user("give me the Best player in the world in 2022")
                     .call()
                     .entity(Player.class);
             System.out.println("player = " + player);
@@ -70,7 +70,7 @@ public class SpringOllamaApplication {
             System.out.println("********************************");
 
             List<Player> players = chatClient.prompt()
-                    .user("give me the Best 10 players in the world in 2023")
+                    .user("give me the Best 10 players in the world in 2022")
                     .call()
                     .entity(new ParameterizedTypeReference<List<Player>>() {});
             System.out.println("players = " + players);
