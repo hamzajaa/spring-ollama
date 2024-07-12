@@ -49,7 +49,7 @@ public class SpringOllamaApplication {
             OllamaChatModel chatModel2 = new OllamaChatModel(
                     new OllamaApi("http://localhost:11434/"),
                     OllamaOptions.create()
-                            .withModel("llama3")
+                            .withModel("llama2")
             );
             this.chatClient = ChatClient.builder(chatModel2).build();
 
@@ -73,6 +73,7 @@ public class SpringOllamaApplication {
                     .user("give me the Best 10 players in the world in 2022")
                     .call()
                     .entity(new ParameterizedTypeReference<List<Player>>() {});
+            System.out.println(players.size());
             System.out.println("players = " + players);
 
             System.out.println("********************************");
